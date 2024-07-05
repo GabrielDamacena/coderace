@@ -29,6 +29,16 @@ class AvaliadorModel {
     return result.rows[0] || null;
   }
 
+  static async findByNome(nome: string): Promise<Avaliador | null> {
+    const result = await pool.query("SELECT * FROM avaliadores WHERE id = $1", [nome]);
+    return result.rows[0] || null;
+  }
+
+  static async findByLogin(login: string): Promise<Avaliador | null> {
+    const result = await pool.query("SELECT * FROM avaliadores WHERE id = $1", [login]);
+    return result.rows[0] || null;
+  }
+
   async update(id: number, avaliador: Partial<Avaliador>): Promise<Avaliador | null> {
     const fields: string[] = [];
     const values: any[] = [];

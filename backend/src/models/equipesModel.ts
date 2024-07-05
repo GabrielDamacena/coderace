@@ -27,6 +27,12 @@ class EquipeModel {
     return result.rows[0] || null;
   }
 
+  static async findOne(nome: string): Promise<Equipe | null> {
+    const result = await pool.query("SELECT * FROM equipes WHERE id = $1", [nome]);
+    return result.rows[0] || null;
+  }
+
+
   async update(id: number, equipe: Partial<Equipe>): Promise<Equipe | null> {
     const fields: string[] = [];
     const values: any[] = [];
