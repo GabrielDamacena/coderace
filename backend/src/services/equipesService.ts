@@ -1,4 +1,4 @@
-// src/services/equipeService.ts
+
 
 import { Equipe, EquipeModel } from "../models/equipesModel";
 

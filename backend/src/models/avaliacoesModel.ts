@@ -1,4 +1,4 @@
-// src/models/avaliacaoModel.ts
+
 
 import pool from "../database/dbConfig";
 
@@ -6,7 +6,7 @@ interface Avaliacao {
   id?: number;
   avaliador_id: number;
   equipe_id: number;
-  notas: any; // Deve ser um JSON válido, o tipo any aqui é genérico para fins de exemplo
+  notas: any; 
 }
 
 class AvaliacaoModel {

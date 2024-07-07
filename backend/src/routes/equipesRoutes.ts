@@ -1,4 +1,4 @@
-// src/routes/equipeRoutes.ts
+
 
 import { Router } from "express";
 import equipeController from "../controllers/equipesController";

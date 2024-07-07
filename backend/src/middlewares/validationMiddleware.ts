@@ -1,4 +1,4 @@
-// src/middlewares/validationMiddleware.ts
+
 import { check, validationResult } from "express-validator";
 import { Request, Response, NextFunction } from "express";
 import { AvaliadorModel } from "../models/avaliadoresModel";
@@ -17,7 +17,7 @@ const validateAvaliador = [
   },
 ];
 
-// Middleware de validação para equipes
+
 const validateEquipe = [
   check("nome").isString().notEmpty(),
   (req: Request, res: Response, next: NextFunction) => {
@@ -29,18 +29,18 @@ const validateEquipe = [
   },
 ];
 
-// Middleware de validação para avaliações
-const validateAvaliacao = [
-  check("avaliador_id").isInt().notEmpty(),
-  check("equipe_id").isInt().notEmpty(),
-  check("notas").isObject().notEmpty(),
-  (req: Request, res: Response, next: NextFunction) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
+ 
+ const validateAvaliacao = [
+   check("avaliador_id").isInt().notEmpty(),
+   check("equipe_id").isInt().notEmpty(),
+   check("notas").isObject(),
+   (req: Request, res: Response, next: NextFunction) => {
+     const errors = validationResult(req);
+     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-  },
-];
+     }
+     next();
+   },
+ ];
 
 export { validateAvaliador, validateEquipe, validateAvaliacao };

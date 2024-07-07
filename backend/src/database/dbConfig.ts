@@ -1,7 +1,7 @@
 import { Pool } from "pg";
 import dotenv from "dotenv";
 
-// Carregar as variáveis de ambiente do arquivo .env
+
 dotenv.config();
 
 const pool = new Pool({

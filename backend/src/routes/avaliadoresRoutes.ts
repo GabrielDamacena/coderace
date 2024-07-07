@@ -1,4 +1,4 @@
-// src/routes/avaliadorRoutes.ts
+
 
 import { Router } from "express";
 import avaliadorController from "../controllers/avaliadoresController";

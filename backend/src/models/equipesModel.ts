@@ -1,4 +1,4 @@
-// src/models/equipeModel.ts
+
 
 import pool from "../database/dbConfig";
 

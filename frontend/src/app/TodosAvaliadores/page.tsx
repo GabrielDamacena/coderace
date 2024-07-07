@@ -30,7 +30,6 @@ export default function Home() {
   const handleExcluirAvaliador = async (id: number) => {
     try {
       await api.delete(`/avaliadores/${id}`);
-      // Atualizar a lista de avaliadores após exclusão
       fetchAvaliadores();
     } catch (error) {
       console.error("Erro ao excluir avaliador:", error);

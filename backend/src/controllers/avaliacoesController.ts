@@ -1,4 +1,3 @@
-// src/controllers/avaliacaoController.ts
 
 import { Request, Response } from "express";
 import avaliacaoService from "../services/avaliacoesService";

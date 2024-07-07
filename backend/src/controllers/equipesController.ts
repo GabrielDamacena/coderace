@@ -1,4 +1,4 @@
-// src/controllers/equipeController.ts
+
 
 import { Request, Response } from "express";
 import equipeService from "../services/equipesService";

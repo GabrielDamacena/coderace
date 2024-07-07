@@ -29,7 +29,6 @@ export default function Home() {
   const handleExcluirEquipe = async (id: number) => {
     try {
       await api.delete(`/equipes/${id}`);
-      // Atualizar a lista de equipes após exclusão
       fetchEquipes();
     } catch (error) {
       console.error("Erro ao excluir equipe:", error);

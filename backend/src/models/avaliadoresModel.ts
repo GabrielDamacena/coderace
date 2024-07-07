@@ -1,4 +1,4 @@
-// src/models/avaliadorModel.ts
+
 
 import pool from "../database/dbConfig";
 
